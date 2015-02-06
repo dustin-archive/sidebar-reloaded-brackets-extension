@@ -1,0 +1,13 @@
+{
+    "name": "dustindowell.sidebar-reloaded",
+    "title": "Sidebar Reloaded",
+    "description": "Sidebar Reloaded",
+    "homepage": "https://github.com/dustindowell22/sidebar-reloaded-brackets-extension",
+    "version": "1.0.0",
+    "author": "Dustin Dowell (https://github.com/dustindowell22)",
+    "license": "MIT",
+    "engines": {
+      "brackets": ">=1.0.0"
+    },
+    "keywords": ["sidebar", "reloaded"]
+}

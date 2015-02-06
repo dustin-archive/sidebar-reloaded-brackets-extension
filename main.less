@@ -1,0 +1,221 @@
+// Note to people poking around: I'm still cleaning up this file.
+
+// Working Files
+#working-set-list-container {
+  font-size: 14px !important;
+}
+
+.open-files-container a {
+  font-size: 14px !important;
+}
+
+// Project Files
+#project-files-header {
+  height: 48px;
+  padding: 0 8px !important;
+  box-sizing: border-box;
+  font-size: 14px !important;
+  line-height: 32px !important;
+}
+
+#project-dropdown-toggle {
+  margin: 8px 0 !important;
+  padding: 0 8px !important;
+  box-sizing: border-box;
+  font-size: 14px !important;
+}
+
+#project-title {
+  height: 16px !important;
+  line-height: 16px !important;
+}
+
+#project-files-container {
+  ul {
+    padding-left: 16px !important;
+
+    ul {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+// File Tree
+.filetree-selection {
+  height: 24px !important;
+  border: none !important;
+}
+
+.filetree-selection-extension {
+  display: none !important;
+}
+
+.filetree-context {
+  height: 24px !important;
+}
+
+// JS Tree
+.jstree {
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    min-height: 24px !important;
+    margin: 0 0 0 16px !important;
+    padding: 0;
+    position: relative;
+    line-height: 16px;
+    white-space: nowrap;
+
+    > a {
+      display: block;
+      padding: 4px 0 !important;
+//      padding-left: @jstree-sprite-size - 10px; // UNDEFINED
+      font-size: 14px !important; // NEW
+    }
+  }
+
+  ins {
+    background-image: none !important; // UNDEFINED
+    background-repeat: no-repeat;
+  }
+
+  a {
+    cursor: default;
+    text-decoration: none;
+
+    &, &:hover {
+//      color: @project-panel-text-1; // UNDEFINED
+    }
+  }
+
+  .extension {
+//    color: @project-panel-text-2; // UNDEFINED
+  }
+}
+
+// RTL
+.jstree-rtl {
+  > ul > li {
+    margin-right: 0;
+  }
+
+  li {
+    margin-right: 16px !important;
+    margin-left: 0;
+  }
+
+  a .jstree-icon {
+    margin-right: 0;
+    margin-left: 2px !important;
+  }
+}
+
+// Leaves
+.jstree-open, .jstree-closed {
+  > a {
+    &, &:hover {
+//      color: @project-panel-text-2; // UNDEFINED
+    }
+  }
+
+  // NEW
+  > ins:before {
+    display: block;
+    content: '\25b6';
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box !important;
+    color: rgb(173, 185, 189) !important;
+    opacity: 0.625;
+    transition:
+      padding 0.125s ease-in-out,
+      transform 0.125s ease-in-out,
+      text-shadow 0.125s ease-in-out;
+  }
+}
+
+.jstree-open > ins:before {
+  transform: rotate(90deg) !important; // NEW
+  padding: 4px 0 0 9px; // CENTERS
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.5) !important; // ROTATE DROPSHADOW
+}
+
+.jstree-closed > ins:before {
+  padding: 4px 0 0 8px; // CENTERS
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important; // ROTATE DROPSHADOW
+}
+
+.jstree-open > ins,
+.jstree-closed > ins,
+.jstree-leaf > ins {
+  background-position: none !important;
+}
+
+// Leaves no dots (no arrows)
+.jstree-no-dots {
+  .jstree-open > ins,
+  .jstree-closed > ins {
+    background-position: none !important;
+  }
+
+  a .jstree-icon {
+    display: none;
+  }
+}
+
+// Selected file
+.jstree-clicked {
+  &, &.extension {
+//    color: @open-working-file-name-highlight; // UNDEFINED
+  }
+}
+
+// Icon
+.jstree-icon {
+  display: inline-block;
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 !important;
+  padding: 0;
+  position: absolute;
+  left: -24px !important;
+  transform: none !important; // NEW
+  transition: none !important; // NEW
+}
+
+// TEMPORARY
+ins.jstree-icon {
+  left: -24px !important;
+}
+
+// Rename file or folder
+.jstree-rename-input {
+  width: 150px;
+  height: 24px !important;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px !important;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  background: #000;
+//  box-shadow: @bc-shadow-small; // UNDEFINED
+
+  &:focus {
+    outline: none;
+//    border: 1px solid @bc-btn-border-focused; // UNDEFINED
+    box-shadow: none;
+  }
+}
