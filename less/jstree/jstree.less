@@ -1,4 +1,4 @@
-// + JS Tree
+// + JS Tree Theme
 // =============================================
 
 .jstree {
@@ -22,5 +22,44 @@
   a {
     display: block;
     padding: 4px 0;
+    cursor: default;
+    text-decoration: none;
+
+    &, &:hover {
+      color: @project-panel-text-1;
+    }
+
+    &.jstree-clicked {
+      background-color: @opaque-4; // Background color needs to be the same as .filetree-selection so when the sidebar is resized there's no lag in updating the selection highlight width.
+
+      &, .extension {
+        color: @open-working-file-name-highlight;
+      }
+    }
+
+    .extension {
+      color: @project-panel-text-2;
+    }
+  }
+
+  // Icons
+  ins {
+    width: 24px;
+    height: 24px;
+    float: left;
+    clear: both; // Necessary for renaming
+    transition: initial !important; // Override
+    transform: initial !important; // Override
+    color: @project-panel-text-3;
+    text-decoration: none;
+
+    &::before {
+      display: block;
+      width: inherit;
+      height: inherit;
+      box-sizing: border-box;
+      line-height: 24px;
+      text-align: center;
+    }
   }
 }

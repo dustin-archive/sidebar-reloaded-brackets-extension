@@ -4,11 +4,12 @@
 // TEMPORARY :: EVERYTHING IN HERE IS AN OVERRIDE
 
 #working-set-list-container {
-  font-size: 14px;
+  font-size: 14px !important;
+  color: @opaque-1 !important;
 }
 
 .open-files-container a {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 
@@ -16,5 +17,30 @@
 // =============================================
 
 .open-files-container {
-  max-height: initial;
+  max-height: initial !important;
+}
+
+
+
+// Clean this up
+.open-files-container {
+  a {
+    color: @opaque-1 !important;
+  }
+
+  .extension {
+    color: @opaque-2 !important;
+  }
+
+  li.selected a {
+    color: @coffee-chartreuse !important;
+
+    .extension {
+      color: @coffee-chartreuse !important;
+    }
+  }
+}
+
+.file-status-icon dirty {
+  color: @opaque-2 !important;
 }

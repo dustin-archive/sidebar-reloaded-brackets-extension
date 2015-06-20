@@ -7,6 +7,12 @@
 .filetree-selection-extension {
   height: 24px;
   border: none;
+
+  // Background color needs to be the same as .jstree-clicked
+  // so when the sidebar is resized there's no lag in updating
+  // the selection highlight width
+//  background-color: @opaque-4;
+  background-color: initial;
 }
 
 .filetree-selection-extension {
