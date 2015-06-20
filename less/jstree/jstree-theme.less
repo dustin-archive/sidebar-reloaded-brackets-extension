@@ -1,0 +1,54 @@
+// + JS Tree Theme
+// =============================================
+
+@project-panel-text-1: #FFF;
+@project-panel-text-2: rgba(255, 255, 255, 0.5);
+@project-panel-text-3: rgba(255, 255, 255, 0.375);
+
+@open-working-file-name-highlight: #8fddff;
+
+.jstree-brackets {
+  a {
+    cursor: default;
+    text-decoration: none;
+
+    &, &:hover {
+      color: @project-panel-text-1;
+    }
+
+    &.jstree-clicked {
+      &, .extension {
+        color: @open-working-file-name-highlight;
+      }
+    }
+
+    .extension {
+      color: @project-panel-text-2;
+    }
+  }
+
+  // Icons
+  ins {
+    width: 24px;
+    height: 24px;
+    float: left;
+    clear: both; // Necessary when renaming
+    transition: initial !important; // Override
+    transform: initial !important; // Override
+    color: @project-panel-text-3;
+    text-decoration: none;
+
+    &::before {
+      display: block;
+      width: inherit;
+      height: inherit;
+      box-sizing: border-box;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.jstree-no-dots a .jstree-icon {
+  display: none;
+}

@@ -1,18 +1,25 @@
-Sidebar Reloaded Brackets Extension - 1.0.0
+Sidebar Reloaded Dev
 =========
 
-This extension doesn't change much. This mostly serves as a base for future modifications.
+All the changes made with this extension are purely CSS.
 
-Biggest changes:
+## Changelog
 + Font size from 13px to 14px
++ Tweaked colors to be more consistent visually
 + Larger project files button
-+ Replaced arrow sprite sheet with unicode arrow
++ Replaced arrow sprite sheet arrows with a unicode arrow
 + Animated arrow rotation
-+ Everything is, more or less, on a grid
++ Everything is on an 8x8 pixel grid
++ Cleaned up jsTree's non-lessy file which also reduced file size
 
+## Todo
++ Animated dropdown height in the file tree (this will require some js tweaks)
++ Clean up styles in the working files
++ Make the projects button full width
++ Remove the sprite sheet from the projects button
++ File file tree selection width from lagging when dragging out the sidebar
++ Show/hide menu option for the right bar and bottom bar
 
-## Before After Preview
-![Before After Preview](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/preview/before-after-preview.gif)
-
-## Arrow Rotation
-![Arrow Rotation](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/preview/arrow-rotation-preview.gif)
+## How to set up?
+1. I installed the dev build of Brackets from GitHub and removed `jsTree.less` from the styles folder. This gives me a nearly completely un-styled project file tree for this extension to build upon.
+2. Now install the extension.

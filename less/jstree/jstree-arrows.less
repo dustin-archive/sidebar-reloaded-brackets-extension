@@ -1,0 +1,25 @@
+// + JS Tree Arrows
+// =============================================
+
+.jstree-open,
+.jstree-closed {
+  & > ins::before {
+    content: '\25b6';
+  }
+
+  & > ins::before {
+    transition:
+      padding 0.125s,
+      transform 0.125s,
+      text-shadow 0.125s;
+  }
+}
+
+.jstree-open > ins::before {
+  transform: rotate(90deg);
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.375); // Prevent lightsource from rotating
+}
+
+.jstree-closed > ins::before {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.375);
+}
