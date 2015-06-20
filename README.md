@@ -12,7 +12,7 @@ Biggest changes:
 
 
 ## Before After Preview
-![Before After Preview](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/before-after-preview.gif)
+![Before After Preview](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/preview/before-after-preview.gif)
 
 ## Arrow Rotation
-![Arrow Rotation](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/arrow-rotation-preview.gif)
+![Arrow Rotation](https://github.com/dustindowell22/sidebar-reloaded-brackets-extension/blob/master/preview/arrow-rotation-preview.gif)
